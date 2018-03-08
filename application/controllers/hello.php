@@ -119,10 +119,6 @@ class hello extends CI_Controller{
   			}
 
 	}
-
-
-
-
 	// delete
 	public function delete(){
 		$this->load->model('user_model');
