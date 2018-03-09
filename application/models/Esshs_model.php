@@ -41,10 +41,6 @@
 		function insert_data($data){
 			$this->db->insert('students',$data);
 		}
-		function insert_data2($data2){
-			$this->db->insert_batch('enrolled_subj',$data2);
-			// insert multiple data
-		}
 		function insert_yeah($data){
 			for ($i=0; $i <sizeof($data['subj']); $i++) { 
 				$record = array(
@@ -74,10 +70,26 @@
 				return $query->row();
 			}
 		}
+		// fetch single data in view using ajax
+		function fetch_data($id){
+			$query = $this->db->get_where('enrolled_subj', array('student_id' => $id));// SELECT from table where id = id
+			if ($query->num_rows()>0) {
+				return $query->row();
+			}
+			
+			
+		}
+
 		function getenrolledsubj($record_id){			
 			$query = $this->db->query('SELECT * FROM enrolled_subj WHERE student_id = "'.$record_id.'"');
 			return $query->result();
 			
+		}
+		function sample(){
+			$query = $this->db->query('SELECT * FROM students LEFT JOIN enrolled_subj ON students.student_id AND enrolled_subj.student_id = "'.$id.'" WHERE enrolled_subj.grade > 70');
+			if ($query->num_rows()>0) {
+				return $query->row();
+			}
 		}
 }
 

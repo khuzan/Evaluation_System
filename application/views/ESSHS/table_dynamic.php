@@ -262,6 +262,7 @@
                           <td>
                           <?php echo anchor("esshs_controller/get_data/{$value['student_id']}", " ",['class'=>'btn btn-info btn-sm glyphicon glyphicon-edit','title' => 'update']);?>
                           <a href="delete_student/?id=<?php echo $value['student_id'];?>" onclick="return confirm('Are you sure?')" class="btn btn-danger btn-sm glyphicon glyphicon-trash" title = "delete"></a>
+                          <button title="View items" data-id ="<?php echo $value['student_id']?>" name="view_data" class="btn btn-info btn-md view glyphicon glyphicon-eye-open" data-toggle="modal" data-target="#myModal"></button>
                           </td>
                         </tr>
                         <?php endforeach; ?>
@@ -280,7 +281,30 @@
           </div>
         </div>
         <!-- /page content -->
+        <!-- VIEW MODAL -->
+  <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
 
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title" align="center">Student's Detail</h4>
+          </div>
+          <div class="modal-body" id="modalview">
+            <p id = "test" align="center">Some text in the modal.</p>
+
+          </div>
+          <div class="modal-footer">
+            <input name="b_print" type="button" class="btn btn-primary"   onClick="printdiv('div_print');" value=" Print ">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- END VIEW MODAL -->
         <!-- footer content -->
         <footer>
           <div class="pull-right">
@@ -291,6 +315,32 @@
         <!-- /footer content -->
       </div>
     </div>
+    <script type="text/javascript">
+            //view modal script
+      $(function(){
+          $('select.styled').customSelect();
+      });
+
+
+      $(document).on('click', '.view', function(){
+                 var id = $(this).data("id");
+
+                 if(id != '')
+                 {
+                      $.ajax({
+                           url:"<?php echo base_url('esshs_controller/view') ?>",
+                           method:"POST",
+                           data:{M_view:id},
+                           success:function(data){
+                                $('#modalview').html(data);
+                                $('#myModal').modal('show');
+                           }
+                      });
+                 }
+            });
+
+            // end view script
+    </script>
 
     <!-- jQuery -->
     <script src="<?php echo base_url(); ?>assets/vendors/jquery/dist/jquery.min.js"></script>
