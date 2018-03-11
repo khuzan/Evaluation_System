@@ -275,10 +275,10 @@
                                   <th>Grade</th>
                                 </tr>
                               </thead>
-                              <!-- ABM 2nd SEMESTER -->
+                              
                               <?php 
 
-
+                              //ABM Second Semester
                                 $ABM = '<tbody>
                                 <tr>
                                   <td>

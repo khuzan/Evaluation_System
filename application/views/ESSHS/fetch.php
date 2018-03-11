@@ -46,34 +46,45 @@
                       </tbody>
                     </table>
 
-                    
+                    <h3>Subjects Where students are good</h3>
+                    <table class="table table-bordered">
+				           <thead>
+				            <tr>
+				            <th>Subject Code</th>
+				            <th>Description</th>
+				            <th>Grade</th>
+				           </tr>
+				           </thead>
+				            <tbody>
  					<?php 
+ 					$code = array('SJPCS18','SJPABM6');
+ 					$count = 1;
                     	foreach ($STUgrades as $grade) {
-
-                    	$Sgrade = '<table class="table table-bordered">
-				                      <thead>
-				                        <tr>
-				                          <th>Subject Code</th>
-				                          <th>Description</th>
-				                          <th>Grade</th>
-				                        </tr>
-				                      </thead>
-				                      <tbody>
-				                      	<tr>
-					                      	<td>'.$grade['subj_code'].'</td>
-									        <td>'.$grade['description'].'</td>
-									        <td>'.$grade['grade'].'</td>
-								         </tr>
-				                         
-				                      </tbody>
-				                    </table>';
-				        if ($grade['grade'] >=85) {
+                    	
+                    	$Sgrade = '<tr>
+					                   <td>'.$grade['subj_code'].'</td>
+									   <td>'.$grade['description'].'</td>
+									   <td>'.$grade['grade'].'</td>
+								   </tr>
+				                      ';
+				        if ($grade['grade'] >=80) {
 				        	echo $Sgrade;
+				        	if (in_array($grade['subj_code'], $code)) {
+					        		if ($count==1) {
+					        			$count++;
+					        			echo "WE RECOMMEND YOU TO TAKE COURSE BSBA";
+					        		}
+				        			
+				        	}
+				        	
 				        }else{
 				        	echo "UWAG PA MORE!";
 				        }
 				    }
+				    
                     ?>
+                    	</tbody>
+				    </table>
                   </div>
                 </div>
               </div>

@@ -81,7 +81,7 @@
 			
 		}
 		function get_grades($id){
-			$query = $this->db->query('SELECT * FROM enrolled_subj WHERE grade >= 85 AND student_id = "'.$id.'"');
+			$query = $this->db->query('SELECT * FROM enrolled_subj WHERE grade >= 80 AND student_id = "'.$id.'"');
 			return $query->result_array();
 		}
 
