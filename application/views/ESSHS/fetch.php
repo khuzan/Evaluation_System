@@ -46,23 +46,34 @@
                       </tbody>
                     </table>
 
-                    <table class="table table-bordered">
-                      <thead>
-                        <tr>
-                          <th>Subject Code</th>
-                          <th>Description</th>
-                          <th>Grade</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td><?php echo $value->subj_code.' '.$value->lastname; ?></td>
-                          <td><?php echo $value->strand; ?></td>
-                          <td><?php echo $value->yr_lvl; ?></td>
-                        </tr>
-                      </tbody>
-                    </table>
+                    
+ 					<?php 
+                    	foreach ($STUgrades as $grade) {
 
+                    	$Sgrade = '<table class="table table-bordered">
+				                      <thead>
+				                        <tr>
+				                          <th>Subject Code</th>
+				                          <th>Description</th>
+				                          <th>Grade</th>
+				                        </tr>
+				                      </thead>
+				                      <tbody>
+				                      	<tr>
+					                      	<td>'.$grade['subj_code'].'</td>
+									        <td>'.$grade['description'].'</td>
+									        <td>'.$grade['grade'].'</td>
+								         </tr>
+				                         
+				                      </tbody>
+				                    </table>';
+				        if ($grade['grade'] >=85) {
+				        	echo $Sgrade;
+				        }else{
+				        	echo "UWAG PA MORE!";
+				        }
+				    }
+                    ?>
                   </div>
                 </div>
               </div>

@@ -72,14 +72,21 @@
 		}
 		// fetch single data in view using ajax
 		function fetch_data($id){
-			$query = $this->db->get_where('enrolled_subj', array('student_id' => $id));// SELECT from table where id = id
+			$query = $this->db->get_where('students', array('student_id' => $id));// SELECT from table where id = id
 			if ($query->num_rows()>0) {
+				
 				return $query->row();
 			}
 			
 			
 		}
+		function get_grades($id){
+			$query = $this->db->query('SELECT * FROM enrolled_subj WHERE grade >= 85 AND student_id = "'.$id.'"');
+			return $query->result_array();
+		}
 
+
+		// UPDATE
 		function getenrolledsubj($record_id){			
 			$query = $this->db->query('SELECT * FROM enrolled_subj WHERE student_id = "'.$record_id.'"');
 			return $query->result();

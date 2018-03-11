@@ -103,9 +103,10 @@ class Esshs_controller extends CI_Controller{
 	// VIEW
 	public function view(){
 		$id = $this->input->post('M_view');
-		$data['value'] = $this->Esshs_model->fetch_data($id);
-		var_dump($data);
-		// $this->load->view('ESSHS/fetch',$data);
+		$data['value']		=$this->Esshs_model->fetch_data($id);
+		$data['STUgrades']	=$this->Esshs_model->get_grades($id); 
+		// var_dump($data);
+		$this->load->view('ESSHS/fetch',$data);
 
 	}
 	public function sample(){
