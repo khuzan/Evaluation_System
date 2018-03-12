@@ -223,22 +223,22 @@
                     <br />
                     <form class="form-horizontal form-label-left input_mask" method="POST" action="<?php echo base_url('Esshs_controller/insert') ?>">
                       <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback"> 
-                        <input type="text" class="form-control has-feedback-left" id="inputSuccess2" value="<?php echo $firstname; ?>">
+                        <input type="text" class="form-control has-feedback-left" readonly id="inputSuccess2" value="<?php echo $firstname; ?>">
                         <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
                       </div>
 
                       <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                        <input type="text" class="form-control" id="inputSuccess3" value="<?php echo $lastname; ?>">
+                        <input type="text" class="form-control" id="inputSuccess3" value="<?php echo $lastname; ?>" readonly>
                         <span class="fa fa-user form-control-feedback right" aria-hidden="true"></span>
                       </div>
 
                       <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                        <input type="text" class="form-control has-feedback-left" id="inputSuccess4" value="<?php echo $strand; ?>">
+                        <input type="text" class="form-control has-feedback-left" id="inputSuccess4" value="<?php echo $strand; ?>" readonly>
                         <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
                       </div>
 
                       <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                        <input type="text" class="form-control" id="inputSuccess5" value="<?php echo $semester; ?>">
+                        <input type="text" class="form-control" id="inputSuccess5" value="<?php echo $semester; ?>" readonly>
                         <span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
                       </div>
                       <!-- TABLE -->
@@ -275,11 +275,7 @@
                                   <th>Grade</th>
                                 </tr>
                               </thead>
-                              
-                              <?php 
-
-                              //ABM Second Semester
-                                $ABM = '<tbody>
+                              <tbody>
                                 <tr>
                                   <td>
                                     <input type="text" class="form-control" value="SJPCS15" name="code[]" readonly>
@@ -326,7 +322,7 @@
                                 </tr>
                                 <tr>
                                   <td>
-                                    <input type="text" class="form-control" readonly value="SJPAT5" name="code[]">
+                                    <input type="text" class="form-control" readonly value="SJPAT7" name="code[]">
                                   </td>
                                   <td>
                                     <input type="text" class="form-control" readonly value="Inquiries, Investigations and Immersion" name="subj[]">
@@ -335,6 +331,68 @@
                                     <input type="number" maxlength="2" minlength="2" class="form-control" required="required" name="grade[]">
                                   </td>
                                 </tr>
+                              <?php 
+                              // TECH-VOC Second Semester
+                              $tech_voc = '
+                                <tr>
+                                  <td>
+                                    <input type="text" class="form-control" readonly value="SJPTV-HE-3B" name="code[]">
+                                  </td>
+                                  <td>
+                                    <input type="text" class="form-control" readonly value="Front Office Services 2 (NCII)" name="subj[]">
+                                  </td>
+                                  <td>
+                                    <input type="number" maxlength="2" minlength="2" class="form-control" required="required" name="grade[]">
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <input type="text" class="form-control" readonly value="SJPTV-HE-4B" name="code[]">
+                                  </td>
+                                  <td>
+                                    <input type="text" class="form-control" readonly value="Tourism 2" name="subj[]">
+                                  </td>
+                                  <td>
+                                    <input type="number" maxlength="2" minlength="2" class="form-control" required="required" name="grade[]">
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <input type="text" class="form-control" readonly value="SJPTV-ICT-1G" name="code[]">
+                                  </td>
+                                  <td>
+                                    <input type="text" class="form-control" readonly value="Computer System Servicing 7" name="subj[]">
+                                  </td>
+                                  <td>
+                                    <input type="number" maxlength="2" minlength="2" class="form-control" required="required" name="grade[]">
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <input type="text" class="form-control" readonly value="SJPTV-ICT-1H" name="code[]">
+                                  </td>
+                                  <td>
+                                    <input type="text" class="form-control" readonly value="Computer System Servicing 8" name="subj[]">
+                                  </td>
+                                  <td>
+                                    <input type="number" maxlength="2" minlength="2" class="form-control" required="required" name="grade[]">
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <input type="text" class="form-control" readonly value="SJPOJT" name="code[]">
+                                  </td>
+                                  <td>
+                                    <input type="text" class="form-control" readonly value="Work Immersion/Culminating Activity" name="subj[]">
+                                  </td>
+                                  <td>
+                                    <input type="number" maxlength="2" minlength="2" class="form-control" required="required" name="grade[]">
+                                  </td>
+                                </tr>
+                                </tbody>';
+                              
+                              //ABM Second Semester
+                                $ABM = '
                                 <tr>
                                   <td>
                                     <input type="text" class="form-control" readonly value="SJPABM6" name="code[]">
@@ -380,9 +438,110 @@
                                   </td>
                                 </tr>
                                 </tbody>';
+                                // GAS second Semester
+                                $Gas = '
+                                <tr>
+                                  <td>
+                                    <input type="text" class="form-control" readonly value="SJPGAS4" name="code[]">
+                                  </td>
+                                  <td>
+                                    <input type="text" class="form-control" readonly value="Disaster Readiness and Risk Reduction" name="subj[]">
+                                  </td>
+                                  <td>
+                                    <input type="number" maxlength="2" minlength="2" class="form-control" required="required" name="grade[]">
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <input type="text" class="form-control" readonly value="SJPSTEM1" name="code[]">
+                                  </td>
+                                  <td>
+                                    <input type="text" class="form-control" readonly value="Pre-Calculus" name="subj[]">
+                                  </td>
+                                  <td>
+                                    <input type="number" maxlength="2" minlength="2" class="form-control" required="required" name="grade[]">
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <input type="text" class="form-control" readonly value="SJPABM7" name="code[]">
+                                  </td>
+                                  <td>
+                                    <input type="text" class="form-control" readonly value="Principles of marketing" name="subj[]">
+                                  </td>
+                                  <td>
+                                    <input type="number" maxlength="2" minlength="2" class="form-control" required="required" name="grade[]">
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <input type="text" class="form-control" readonly value="SJPOJT" name="code[]">
+                                  </td>
+                                  <td>
+                                    <input type="text" class="form-control" readonly value="Work Immersion/Culminating Activity" name="subj[]">
+                                  </td>
+                                  <td>
+                                    <input type="number" maxlength="2" minlength="2" class="form-control" required="required" name="grade[]">
+                                  </td>
+                                </tr>
+                                </tbody>';
+                                // STEM second Semester
+                                $stem = '
+                                <tr>
+                                  <td>
+                                    <input type="text" class="form-control" readonly value="SJPSTEM6" name="code[]">
+                                  </td>
+                                  <td>
+                                    <input type="text" class="form-control" readonly value="General Physics 2" name="subj[]">
+                                  </td>
+                                  <td>
+                                    <input type="number" maxlength="2" minlength="2" class="form-control" required="required" name="grade[]">
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <input type="text" class="form-control" readonly value="SJPSTEM7" name="code[]">
+                                  </td>
+                                  <td>
+                                    <input type="text" class="form-control" readonly value="General Biology 2" name="subj[]">
+                                  </td>
+                                  <td>
+                                    <input type="number" maxlength="2" minlength="2" class="form-control" required="required" name="grade[]">
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <input type="text" class="form-control" readonly value="SJPSTEM8" name="code[]">
+                                  </td>
+                                  <td>
+                                    <input type="text" class="form-control" readonly value="General Chemistry 2" name="subj[]">
+                                  </td>
+                                  <td>
+                                    <input type="number" maxlength="2" minlength="2" class="form-control" required="required" name="grade[]">
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <input type="text" class="form-control" readonly value="SJPOJT" name="code[]">
+                                  </td>
+                                  <td>
+                                    <input type="text" class="form-control" readonly value="Work Immersion/Culminating Activity" name="subj[]">
+                                  </td>
+                                  <td>
+                                    <input type="number" maxlength="2" minlength="2" class="form-control" required="required" name="grade[]">
+                                  </td>
+                                </tr>
+                                </tbody>';
                                 if ($strand == 'ABM') {
                                   echo $ABM;
-                                }else{
+                                }elseif ($strand == 'TECH-VOC') {
+                                  echo $tech_voc;
+                                }elseif ($strand == 'GAS') {
+                                  echo $Gas;
+                                }elseif ($strand == 'STEM') {
+                                  echo $stem;
+                                }
+                                else{
                                   echo "No data";
                                 }
                                ?>

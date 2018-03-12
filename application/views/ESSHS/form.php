@@ -275,8 +275,7 @@
                             <option value="STEM">STEM</option>
                             <option value="GAS">GAS</option>
                             <option value="ABM">ABM</option>
-                            <option value="TECH-VOC(ICT)">TECH-VOC(ICT)</option>
-                            <option value="TECH-VOC(HE)">TECH-VOC(HE)</option>
+                            <option value="TECH-VOC">TECH-VOC</option>
                           </select>
                         </div>
                       </div>
