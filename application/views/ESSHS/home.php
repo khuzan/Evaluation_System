@@ -203,7 +203,7 @@
             </div>
             <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-clock-o"></i> Honor Students</span>
-              <div class="count">123.50</div>
+              <div class="count"><?php echo $honors; ?></div>
             </div>	
             <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-user"></i> Total Males</span>
@@ -235,30 +235,30 @@
                     </div>
                     <div class="w_center w_55">
                       <div class="progress">
-                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 66%;">
+                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $STEM."%"; ?>">
                           <span class="sr-only">60% Complete</span>
                         </div>
                       </div>
                     </div>
                     <div class="w_right w_20">
-                      <span>123k</span>
+                      <span><?php echo $STEM; ?></span>
                     </div>
                     <div class="clearfix"></div>
                   </div>
 
                   <div class="widget_summary">
                     <div class="w_left w_25">
-                      <span>HUMSS</span>
+                      <span>GAS</span>
                     </div>
                     <div class="w_center w_55">
                       <div class="progress">
-                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 45%;">
+                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $GAS."%"; ?>">
                           <span class="sr-only">60% Complete</span>
                         </div>
                       </div>
                     </div>
                     <div class="w_right w_20">
-                      <span>53k</span>
+                      <span><?php echo $GAS; ?></span>
                     </div>
                     <div class="clearfix"></div>
                   </div>
@@ -268,13 +268,13 @@
                     </div>
                     <div class="w_center w_55">
                       <div class="progress">
-                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 25%;">
+                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $ABM."%"; ?>">
                           <span class="sr-only">60% Complete</span>
                         </div>
                       </div>
                     </div>
                     <div class="w_right w_20">
-                      <span>23k</span>
+                      <span><?php echo $ABM; ?></span>
                     </div>
                     <div class="clearfix"></div>
                   </div>
@@ -284,7 +284,7 @@
                     </div>
                     <div class="w_center w_55">
                       <div class="progress">
-                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $techvoc."%"; ?>;">
+                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $techvoc."%"; ?>">
                           <span class="sr-only">60% Complete</span>
                         </div>
                       </div>

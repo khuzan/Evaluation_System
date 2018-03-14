@@ -244,7 +244,6 @@
                           <th>Name</th>
                           <th>Gender</th>
                           <th>Strand</th>
-                          <th>Semester</th>
                           <th>Year Level</th>
                           <th>Option</th>
                         </tr>
@@ -255,7 +254,7 @@
                           <td><?php echo $value['firstname'].' '.$value['lastname']; ?></td>
                           <td><?php echo $value['gender']; ?></td>
                           <td><?php echo $value['strand']; ?></td>
-                          <td><?php echo $value['semester']; ?></td>
+                          <!-- <td><?php echo $value['semester']; ?></td> -->
                           <td><?php echo $value['yr_lvl']; ?></td>
                           <td>
                           <?php echo anchor("esshs_controller/get_data/{$value['student_id']}", " ",['class'=>'btn btn-info btn-sm glyphicon glyphicon-edit','title' => 'update']);?>

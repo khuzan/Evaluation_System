@@ -258,16 +258,6 @@
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="sem" class="control-label col-md-3 col-sm-3 col-xs-12">Semester</label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <select id="sem" class="form-control col-md-7 col-xs-12" type="text" name="semester" required="required">
-                            <option></option>
-                            <option value="1st Semester">1st Semester</option>
-                            <option value="2nd Semester">2nd Semester</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="form-group">
                         <label for="strand" class="control-label col-md-3 col-sm-3 col-xs-12">Academic Track Strand</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <select id="sem" class="form-control col-md-7 col-xs-12" type="text" name="strand" required="required">

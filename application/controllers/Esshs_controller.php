@@ -38,9 +38,13 @@ class Esshs_controller extends CI_Controller{
 	}
 	public function home(){
 		$data['techvoc'] 	= $this->Esshs_model->get_techvoc();
+		$data['ABM'] 	= $this->Esshs_model->get_ABM();
+		$data['GAS'] 	= $this->Esshs_model->get_GAS();
+		$data['STEM'] 	= $this->Esshs_model->get_STEM();
 		$data['students'] 	= $this->Esshs_model->get_students();
 		$data['females'] 	= $this->Esshs_model->get_females();
 		$data['males'] 		= $this->Esshs_model->get_males();
+		$data['honors']		= $this->Esshs_model->get_honors();
 		$this->load->view('ESSHS/home',$data);
 		$this->load->view('ESSHS/footer');
 	}
@@ -59,7 +63,6 @@ class Esshs_controller extends CI_Controller{
 			"lastname"		=>$this->input->post(htmlspecialchars("lname")),
 			"gender"		=>$this->input->post(htmlspecialchars("gender")),
 			"yr_lvl"		=>$this->input->post(htmlspecialchars("yr-lvl")),
-			"semester"		=>$this->input->post(htmlspecialchars("semester")),
 			"strand"		=>$this->input->post(htmlspecialchars("strand"))	
 			);
 		$this->Esshs_model->insert_data($data);

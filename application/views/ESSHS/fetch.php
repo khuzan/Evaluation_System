@@ -116,7 +116,7 @@
 				          		}elseif (in_array($grade['subj_code'],$gas)) {
 				          			if ($count==1) {
 				          					$count++;
-				          					echo "This strand is purposively designed for those students who are still indecisive of what course or degree they want to pursue in college. A student who finished on this strand can proceed to any college program. However he/she has to take some subjects not taken in Senior High but required by a particular college as a bridging program to assess his/her preparedness in the field of study chosen.";
+				          					echo "<h5 style='color:red;'><b>This strand is purposively designed for those students who are still indecisive of what course or degree they want to pursue in college. A student who finished on this strand can proceed to any college program. However he/she has to take some subjects not taken in Senior High but required by a particular college as a bridging program to assess his/her preparedness in the field of study chosen.</b></h5>";
 				          			}
 				          		}elseif (in_array($grade['subj_code'], $techvocICT)) {
 				          			if ($count==1) {

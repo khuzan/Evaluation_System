@@ -21,8 +21,24 @@
 			$query->result_array();
 			return $query->result_array();
 		}
+		function get_honors(){
+			$query =$this->db->query('SELECT * FROM enrolled_subj INNER JOIN students WHERE grade >= 90');
+			return $query->num_rows();
+		}
 		function get_techvoc(){
-			$query = $this->db->query("SELECT firstname from students WHERE strand = 'TECH-VOC'");
+			$query = $this->db->query("SELECT * from students WHERE strand = 'TECH-VOC'");
+			 return $query->num_rows();
+		}
+		function get_ABM(){
+			$query = $this->db->query("SELECT * from students WHERE strand = 'ABM'");
+			 return $query->num_rows();
+		}
+		function get_GAS(){
+			$query = $this->db->query("SELECT * from students WHERE strand = 'GAS'");
+			 return $query->num_rows();
+		}
+		function get_STEM(){
+			$query = $this->db->query("SELECT firstname from students WHERE strand = 'STEM'");
 			 return $query->num_rows();
 		}
 		function get_students(){
